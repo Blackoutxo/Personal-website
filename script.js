@@ -26,5 +26,8 @@ async function getRepo() {
     }
 }
 
+// Add alotta classes :O
+
+
 // Functions
 getRepo();
