@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    font-family: 'Space Grotesk', sans-serif;
+    --accent-card:rgb(248, 103, 103);
+    --top-accent-card: rgb(255, 255, 51);
+    --border-color: rgb(0, 0, 0);
+    --txt:rgb(255, 255, 255);
+    --neo: rgb(0, 240, 255);
+}
+
+/* Page Define */
+main {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+}
+
+/* Fonts */
+.space-grotesk-bold {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* -------------- Body -------------- */
+body {
+    display: flex;
+    zoom: 67%;
+    width: 500vw;
+
+    overflow: hidden;
+
+    background-size: 60px 60px;
+    background-color: rgb(255, 246, 246);
+    background-image: 
+    linear-gradient(to right, rgba(172, 166, 166, 0.397) 1px, transparent 1px),
+    linear-gradient(to bottom,rgba(172, 166, 166, 0.397) 1px, transparent 1px);
+}
+
+/* -------------- Nav Bar -------------- */
+.nav-bar {
+    width: 92vw;
+    height: 110px;
+    margin: 30px auto 0;
+
+    position: fixed;
+    display: flex;
+    justify-self: center;
+    left: 25vw;
+
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+
+    background-color: white;
+    border: 6px solid var(--border-color);
+    box-shadow: 10px 10px 0px var(--border-color);
+
+    z-index: 999;
+}
+
+/* -------------- Nav Bar Elements -------------- */
+
+/* Blackout */
+#blackout {
+    font-size: 2.4rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--border-color);
+
+    padding: 8px 20px;
+    outline: 6px solid var(--border-color);
+    background-color: var(--accent-card);
+    
+    display: inline-block;
+    line-height: 1;
+
+    transform: rotate(-3deg);
+
+    transition: 0.2s ease-in-out;
+}
+
+#blackout:hover {
+    cursor: pointer;
+    transform: rotate(0deg);
+}
+
+/* Nav Bar Text tags */
+.nav-links {
+    display: flex;
+    gap: 60px;
+
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    font-size: 1.3rem;
+
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    
+    padding: 4px 8px;
+    color: inherit;
+    text-decoration: none;
+
+    transition: background 0.2s;
+}
+
+.nav-link:hover {
+    background-color: var(--neo);
+}
+ 
+.link-overlay {
+    position: absolute;
+    
+    border: 2px solid var(--border-color);
+    opacity: 0;
+
+    transform: translate(4px, 4px); 
+    transition: opacity 0.2s;
+    
+    inset: 0;
+
+    z-index: -10;
+}
+
+.nav-link:hover .link-overlay {
+  opacity: 1;
+}
+
+/* Social links */
+.nav-socials {
+  display: flex;
+  gap: 30px;
+}
+
+.social-icon {
+  display: flex;
+  
+  width: 60px;
+  height: 60px;
+
+  border: 2px solid var(--border-color);
+  box-shadow: 2px 2px 0px 0px #000;
+
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.2s;
+}
+
+.social-icon:hover {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+/* Background icon colors */
+.discord { background-color: rgb(137, 137, 255); }
+.github { background-color: white; }
+.youtube { background-color: white; }
+
+
+
+/* -------------- Title -------------- */
+#title {
+    display: flexbox;
+
+    width: 30%;
+    margin-top: 225px;
+}
+
+/* Top Floating Box */
+.top-box {
+    background-color: var(--accent-card);
+
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+
+    align-self: center;
+    justify-self: center;
+    
+    border: 6px solid var(--border-color);
+    box-shadow: 10px 10px 0px black;
+
+    font-family:"Space Grotesk";
+    font-size: 1.6rem;
+    width: 350px;
+    height: 60px;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+.top-txt {
+    font-weight: 600;
+    color: var(--txt);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-3deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(-3deg);
+  }
+}
+
+/* Main header */
+.header-mid {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+
+    margin-top: 30px;
+    
+    font-family: "Space Grotesk";
+    font-weight: 800;
+    font-size: 12rem;
+
+    text-align: center;
+}
+
+.top-H {
+
+    height: 170px;
+}
+
+.mid-H {
+    height: 170px;
+    color: transparent;
+    -webkit-text-stroke: 3px black;
+}
+
+/* Description paragraph */
+.description-paragraph {
+    width: 1500px;
+    height: 150px;
+
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: -0.06rem;
+
+}
+
+#highlight-paragraph {
+    background-color: var(--neo);
+    padding: 0px 6px;
+}
+
+/* -------------- About Me -------------- */
+.about {
+    display: flexbox;
+    
+    width: 10%;
+}
+
+.about-me {
+    width: 1500px;
+    height: 800px;
+
+    background-color: white;
+    outline: 6px solid var(--border-color);
+}
