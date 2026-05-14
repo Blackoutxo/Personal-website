@@ -61,15 +61,16 @@ themeToggle.addEventListener('click', () => {
     headerMid.classList.toggle('windowDown');
     midH.classList.toggle('windowDown');
     description.classList.toggle('windowDown');
-   
+    
+    workBtn.classList.toggle('windowDown');
+    contactBtn.classList.toggle('windowDown');
+
     // About me
     abtImg.classList.toggle('windowDown');
     aboutMe.classList.toggle('windowDown');
     aboutTxt.classList.toggle('windowDown');
     aboutHeader.classList.toggle('windowDown');
     aboutParagraph.classList.toggle('windowDown');
-    workBtn.classList.toggle('windowDown');
-    contactBtn.classList.toggle('windowDown');
     jsBtn.classList.toggle('windowDown');
     htmlBtn.classList.toggle('windowDown');
     jvmBtn.classList.toggle('windowDown');

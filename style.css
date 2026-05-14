@@ -445,7 +445,6 @@ body.windowDown {
     box-shadow: none;
 }
 
-
 /* -------------- About Me -------------- */
 #about {
     display: flex;
@@ -647,3 +646,87 @@ body.windowDown {
 }
 
 /* -------------- Skills -------------- */
+#skills {
+    display: flex;
+
+    position: absolute;
+    left: 6750px;
+}
+
+.my-toolbox {
+    position: absolute;
+    top: 75vh;
+    left: 18vw;
+
+    background-color: var(--bg-dark);
+    padding: 7px 17px;
+
+    font-size: 3rem;
+    font-weight: 600;
+    color: white;
+}
+
+.front-end-box {
+    position: absolute;
+    top: 500px;
+    left: -500px;
+
+    width: 680px;
+    height: 400px;
+
+    outline: 6px solid var(--bg-dark);
+    box-shadow: 16px 16px 0px 0px var(--border-color-dark);
+    background-color: var(--bg-white);
+
+    z-index: 1;
+
+    transition: 0.2s ease-in-out;
+}
+
+.front-end-box:hover {
+    transform: translateX(600px) scale(2);
+    z-index: 100;
+}
+
+.grid-box {
+    position: absolute;
+    top: 45px;
+    left: 45px;
+
+    width: 80px;
+    height: 80px;
+
+    transform: rotate(5deg);
+
+    background-color: var(--accent-card);
+    padding: 10px 10px;
+    outline: 6px solid var(--border-color-dark);
+    box-shadow: 16px 16px 0px 0px var(--border-color-dark);
+
+    transition: 0.2s ease-in-out;
+}
+
+.front-end-box:hover .grid-box {
+    transform: rotate(0deg);
+}
+
+.back-end-box {
+    position: absolute;
+    top: 500px;
+    right: 450px;
+
+    width: 680;
+    height: 400px;
+
+    outline: 6px solid var(--bg-dark);
+    box-shadow: 16px 16px 0px 0px var(--border-color-dark);
+    background-color: var(--bg-white);
+
+    transition: 0.2s ease-in-out;
+
+    z-index: 1;
+}
+
+.back-end-box:hover {
+    transform: translateX(-600px) scale(2);
+}
