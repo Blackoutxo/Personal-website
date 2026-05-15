@@ -418,7 +418,7 @@ body.windowDown {
     position: absolute;
     left: 75vw;
 
-    padding: 30px 50px;
+    padding: 30px 55px;
     outline: 6px solid var(--border-color-dark);
     box-shadow: 15px 15px 0px 0px var(--border-color-dark);
 
@@ -655,7 +655,7 @@ body.windowDown {
 
 .my-toolbox {
     position: absolute;
-    top: 75vh;
+    top: 45vh;
     left: 18vw;
 
     background-color: var(--bg-dark);
@@ -666,13 +666,28 @@ body.windowDown {
     color: white;
 }
 
+.skills-txt {
+    position: absolute;
+    top: 55vh;
+    left: 13vw;
+
+    font-size: 14rem;
+    font-weight: 600;
+    -webkit-text-stroke: 2px black;
+
+    color: transparent;
+}
+
+/* Front end box */
 .front-end-box {
+    display: flex;
+
     position: absolute;
     top: 500px;
     left: -500px;
 
-    width: 680px;
-    height: 400px;
+    width: 700px;
+    height: 450px;
 
     outline: 6px solid var(--bg-dark);
     box-shadow: 16px 16px 0px 0px var(--border-color-dark);
@@ -686,8 +701,10 @@ body.windowDown {
 .front-end-box:hover {
     transform: translateX(600px) scale(2);
     z-index: 100;
+    box-shadow: none;
 }
 
+/* Things inside front end box */
 .grid-box {
     position: absolute;
     top: 45px;
@@ -706,17 +723,72 @@ body.windowDown {
     transition: 0.2s ease-in-out;
 }
 
+
 .front-end-box:hover .grid-box {
     transform: rotate(0deg);
 }
 
+.front-end-box.windowDown{
+    background-color: black;
+    outline: 6px solid var(--border-color-goldish);
+}
+
+.front-end-txt {
+    position: absolute;
+    top: 190px;
+    left: 30px;
+
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    color: white;
+    mix-blend-mode: difference;
+}
+
+.language-grid {
+    position: absolute;
+    top: 270px;
+    left: 30px;
+
+    gap: 30px;
+
+    display: flex;
+}
+
+.html-lang-box, .css-lang-box, .js-lang-box {
+    padding: 5px 10px;
+    outline: 6px solid var(--border-color-dark);
+    box-shadow: 10px 10px 0px 0px var(--border-color-dark);
+
+    text-align: center;
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: var(--txt-dark);
+    font-weight: 600;
+
+    transition: 0.2s ease-in-out;
+}
+
+.html-lang-box:hover, .css-lang-box:hover, .js-lang-box:hover {
+    transform: translate(10px, 10px);
+    box-shadow: none;
+}
+
+.html-lang-box.windowDown, .css-lang-box.windowDown, .js-lang-box.windowDown {
+    color: var(--txt-white);
+    outline: 6px solid var(--border-color-goldish);
+    box-shadow: var(--deep-maroon);
+}
+
+/* Back end box */
 .back-end-box {
     position: absolute;
     top: 500px;
     right: 450px;
 
     width: 680;
-    height: 400px;
+    height: 450px;
 
     outline: 6px solid var(--bg-dark);
     box-shadow: 16px 16px 0px 0px var(--border-color-dark);
@@ -729,4 +801,5 @@ body.windowDown {
 
 .back-end-box:hover {
     transform: translateX(-600px) scale(2);
+    box-shadow: none;
 }

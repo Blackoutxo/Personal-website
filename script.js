@@ -49,6 +49,11 @@ const jsBtn = document.querySelector('.js-box');
 const htmlBtn = document.querySelector('.html-box');
 const jvmBtn = document.querySelector('.jvm-box');
 
+// Skills
+const toolBox = document.querySelector('.my-toolbox');
+const FEbox = document.querySelector('.front-end-box');
+
+
 themeToggle.addEventListener('click', () => {
     // Toggle theme on individual elements
     body.classList.toggle('windowDown');
@@ -74,6 +79,8 @@ themeToggle.addEventListener('click', () => {
     jsBtn.classList.toggle('windowDown');
     htmlBtn.classList.toggle('windowDown');
     jvmBtn.classList.toggle('windowDown');
+
+    // Skills
 
     // Toggle for multiple elements (Lists)
     linkOverlays.forEach(overlay => overlay.classList.toggle('windowDown'));
