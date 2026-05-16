@@ -746,20 +746,20 @@ body.windowDown {
     mix-blend-mode: difference;
 }
 
-.language-grid {
+.front-language-grid {
+    display: flex;
+
     position: absolute;
     top: 270px;
     left: 30px;
 
     gap: 30px;
-
-    display: flex;
 }
 
 .html-lang-box, .css-lang-box, .js-lang-box {
     padding: 5px 10px;
     outline: 6px solid var(--border-color-dark);
-    box-shadow: 10px 10px 0px 0px var(--border-color-dark);
+    box-shadow: 8px 8px 0px 0px var(--border-color-dark);
 
     text-align: center;
     font-size: 1.7rem;
@@ -771,7 +771,7 @@ body.windowDown {
 }
 
 .html-lang-box:hover, .css-lang-box:hover, .js-lang-box:hover {
-    transform: translate(10px, 10px);
+    transform: translate(8px, 8px);
     box-shadow: none;
 }
 
@@ -802,4 +802,78 @@ body.windowDown {
 .back-end-box:hover {
     transform: translateX(-600px) scale(2);
     box-shadow: none;
+}
+
+.storage-box {
+    position: absolute;
+    top: 45px;
+    left: 45px;
+
+    width: 80px;
+    height: 80px;
+
+    transform: rotate(5deg);
+
+    background-color: var(--accent-card);
+    padding: 10px 10px;
+    outline: 6px solid var(--border-color-dark);
+    box-shadow: 16px 16px 0px 0px var(--border-color-dark);
+
+    transition: 0.2s ease-in-out;
+}
+
+.back-end-box:hover .storage-box {
+    transform: rotate(0deg);
+}
+
+.back-end-txt {
+    position: absolute;
+    top: 190px;
+    left: 30px;
+
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    color: white;
+    mix-blend-mode: difference;
+}
+
+.back-language-grid {
+    display: flex;
+
+    position: absolute;
+    top: 270px;
+    left: 30px;
+
+    gap: 30px;
+}
+
+.java-lang-box {
+    padding: 5px 10px;
+    outline: 6px solid var(--border-color-dark);
+    box-shadow: 8px 8px 0px 0px var(--border-color-dark);
+
+    text-align: center;
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: var(--txt-dark);
+    font-weight: 600;
+
+    transition: 0.2s ease-in-out;
+}
+
+.java-lang-box:hover {
+    transform: translate(8px, 8px);
+    box-shadow: none;
+}
+
+/* -------------- Projects --------------*/
+#projects {
+    position: absolute;
+    left: 9500;
+}
+
+.idk {
+    
 }
