@@ -1,8 +1,9 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title> Blackout180 Portfolio </title>
-      <link rel="stylesheet" href="style.css">
+        <title> Blackout180's Portfolio </title>
+        <link rel="icon" type="image/png" href="./assets/images/acc_logo.png">
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>  
@@ -20,7 +21,7 @@
             skills
             <span class="link-overlay"></span>
           </a>
-          <a href="#projects" class="nav-link">       
+          <a href="#projects" class="nav-link">
             projects
             <span class="link-overlay"></span>
           </a> 
@@ -49,26 +50,43 @@
         
       </nav>
     
-    <!---Title-->
+
+    <!---All the horizontal elements--->
+    <section class="elements-horizontal">
+      
+      <!---Title-->
       <main id="title">
         <div class="top-box"> <span class="top-txt">FULL TIME AWESOME GUY</span> </div>
         
         <div class="header-mid"> 
-          <span class="top-H">BUILDING</span>
-          <span class="mid-H">BOLD</span>
-          <span class="bottom-H">EXPERIENCES</span>
+          <div class="top-header">
+            <svg class="top-H" width="1200px" height="165px"> <text x="165" y="150"> BUILDING </text> </svg>
+          </div>
+          
+          <div class="mid-header">
+            <svg class="mid-H" width="1200px" height="165px"> <text x="10" y="150"> BOLD </text> </svg>
+          </div>
+          
+          <span class="bottom-header">
+            <svg class="bottom-H" width="1600px" height="165px"> <text x="180" y="150"> EXPERIENCES </text> </svg>
+          </span>
         </div>
           
-        <p class="description-paragraph"> I go by my alias <span id="highlight-paragraph"> Blackout </span>. I am a crafts man, I can paint a blank canvas into a beautiful picture</p>
+        <p class="description-paragraph"> I go by my alias <span id="highlight-paragraph"> Blackout </span>. I am a crafts man, I can paint a blank canvas into a beautiful picture.</p>
         
-        <a href="#projects" class="works-button">Work</a>
-        <a href="#contact" class="contact-button">Talk</a>
+        <div class="bottom-buttons">
+          <a href="#projects" class="works-button">Work</a>
+          <a href="#contact" class="contact-button">Talk</a>
+        </div>
       </main>
 
 
       <!---About me--->
       <main id="about">
-        <div class="img-placeholder"> [Photo Here]</div>
+        <div class="img-placeholder">[Photo Here]</div>
+        <div class="git-info"> 
+          <p class="git-repos"> Repositories : <span class="git-repo-count">0</span></p>
+        </div>
         <div class="about-me">
           <div class="about-txt">1. ABOUT ME</div>
           <div class="about-header">METICULOUS BY <span id="def-txt">DEFAULT</span></div>
@@ -76,13 +94,16 @@
           <div class="js-box">JS</div>
           <img src="./assets/images/icons/language-icon/html.svg" class="html-box"/>
           <img src="./assets/images/icons/language-icon/java.svg" class="jvm-box" />
+          <img src="./assets/images/icons/github.svg" class="git-about-me"/>
         </div>
       </main>
 
       <!---ToolBox / Skill --->
       <main id="skills">
         <div class="my-toolbox">2. My Toolbox</div>
-        <div class="skills-txt"> Skills </div>
+        <div class="skills-text-area">
+           <svg class="skills-txt"><text x="" y="150">Skills</text></svg> 
+        </div>
         <div class="front-end-box">
           <img class="grid-box"  src="./assets/images/icons/accessory-icon/grid-box.svg" />
           <div class="front-end-txt">FrontEnd</div>
@@ -104,9 +125,44 @@
 
       <!---Projects--->
       <main id="projects"> 
-        <div class="idk"> </div>
+        <div class="work-T">
+          <svg class="work-txt">
+            <text x="" y="300">works</text>
+          </svg>
+        </div>
+
+        <div class="projects-container">
+
+          <div class="combat-helper">
+            <span class="combat-H-text">Combat Helper</span>
+            <p class="combat-paragraph">A JAVA Minecraft fabric mod made for version 1.21.11 which helps player during times of combat.</p>
+            <div class="LU-java"> Java </div>
+            <div class="project-buttons"> 
+              <a class="open-live-code-1" href="" target="_blank"> <img src="./assets/images/icons/accessory-icon/open live code.svg" class="open-code-img-1"/> Live </a> 
+              <a class="open-github-1" href="" target="_blank"> <img src="./assets/images/icons/github.svg" class="open-git-img-1" /> Code </a>
+            </div>
+            <div class="combat-helper-container">
+              <div class="p1-tag">project-1</div>
+              <img src="./assets/images/icons/proj-icon/shield - rogue.png" class="image-combat" />
+            </div>
+          </div>
+        
+          <div class="svelte-proj">
+            <span class="svelte-text">Svelte web</span> 
+            <p class="svelte-paragraph"></p>  
+            <div class="svelte-image-container">
+              <div class="p2-tag"> </div>
+              <img src="" class="image-svelte" />
+            </div>
+          </div>
+      
+        </div>
       </main>
 
-      <script src="script.js" defer></script>
+
+    </section>  
+
+    <script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script> 
+    <script src="script.js" defer></script>
     </body>
 </html>
