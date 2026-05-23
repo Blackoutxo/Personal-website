@@ -1,94 +1,105 @@
+// Local time 
+let date = new Date();
+let isNight;
+
+const hours = String(date.getHours()).padStart(2, '0');
+
+if(hours >= '18') {
+    isNight = true;
+    console.log('The sun is setting down, Bravo 2 going dark!')
+} else { 
+    isNight = false;
+    console.log('The suns rising, Bravo 2 retreating!')
+}
+
 // Scrolling
+const wrapper = document.querySelector(".elements-horizontal");
+ 
+const lenis = new Lenis({
+  wrapper: wrapper,
+  content: wrapper,
+  orientation: "horizontal",
+  gestureOrientation: "both",
+  smoothWheel: true,
+  wheelMultiplier: 3,
+  touchMultiplier: 1.8,
+  lerp: 0.1,
+  infinite: false,
+});
+ 
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
 
-
-
-// Get Repo count
-async function getRepo() {
+// Get github info
+let followers = 0;
+let repoCount = 0;
+async function getGitInfo() {
     try {
-        const response = await fetch(`https://api.github.com/users/Blackoutxo/repos`);
-        const repos = await response.json();
+        const response = await fetch('https://api.github.com/users/Blackoutxo');
+        const infos = await response.json();
+
+        followers = infos.followers;
+        repoCount = infos.public_repos;
+
+        document.querySelector('.git-repo-count').textContent = repoCount;
         
-        repoCount = 0;
-        repos.forEach(repo => {
-            const status = repo.fork ? "true" : "false";
-
-            if(status) repoCount++;
-        });
-
-    } catch (error) {
+        // Add changing texts here
+    }  catch (error) {
         console.error('Error fetching repositories:', error);
     }
 }
 
-// Add alotta classes :O
+// ----- Sound ------ //
+const audio = new Audio('/assets/sound/pencil write.mp3');
+
+window.onload = function () {
+    audio.currentTime = 1;
+    audio.play();
+    audio.currentTime = 3;
+}
+
+//------ Load animations Works ------ //
+
+// About section
+const observeAboutme = new IntersectionObserver(([entry]) => {
+    const targets = document.querySelectorAll('.img-placeholder, .about-me');
+    targets.forEach(el => el.classList.toggle('anim', entry.isIntersecting));
+}, {threshold: 0.1});
+
+observeAboutme.observe(document.querySelector('#about'));
+
+// Skills section
+const observeSkills = new IntersectionObserver(([entry]) => {
+    const targets = document.querySelectorAll('.skills-txt, .front-end-box, .back-end-box, .my-toolbox');
+    targets.forEach(el => el.classList.toggle('anim', entry.isIntersecting));
+}, {threshold: 0.1});
+
+observeSkills.observe(document.querySelector('#skills'));
+
+// Works section
+const observer = new IntersectionObserver(([entry]) => {
+  const targets = document.querySelectorAll('.work-txt, .combat-helper, .combat-H-text, .combat-helper-container, .combat-paragraph, .LU-java, .open-live-code-1, .open-github-1, .p1-tag, .image-combat, .svelte-proj, .svelte-H-text, .svelte-paragraph, .svelte-container, .LU-container, .orcrist-addon-proj, .orcrist-container, .orcrist-img, .orcrist-H-text, .orcrist-paragraph, .LU-java-3');
+    targets.forEach(el => el.classList.toggle('anim', entry.isIntersecting));
+}, { threshold: 0.1 });
+
+observer.observe(document.querySelector('#projects'));
+
+// ------ Theme toggle ------ //
 const themeToggle = document.querySelector('.material-symbols-outlined');
-
-// window down classes
-const body = document.body;
-const navBar = document.querySelector('.nav-bar');
-const blackoutLogo = document.getElementById('blackout');
-const navLinks = document.querySelector('.nav-links');
-const linkOverlays = document.querySelectorAll('.link-overlay');
-const socialIcons = document.querySelectorAll('.social-icon');
-
-// Header
-const topBox = document.querySelector('.top-box');
-const headerMid = document.querySelector('.header-mid');
-const midH = document.querySelector('.mid-H');
-const description = document.querySelector('.description-paragraph');
-
-//About me
-const abtImg = document.querySelector('.img-placeholder');
-const aboutMe = document.querySelector('.about-me');
-const aboutTxt = document.querySelector('.about-txt');
-const aboutHeader = document.querySelector('.about-header');
-const aboutParagraph = document.querySelector('.about-paragraph');
-const workBtn = document.querySelector('.works-button');
-const contactBtn = document.querySelector('.contact-button');
-const jsBtn = document.querySelector('.js-box');
-const htmlBtn = document.querySelector('.html-box');
-const jvmBtn = document.querySelector('.jvm-box');
-
-// Skills
-const toolBox = document.querySelector('.my-toolbox');
-const FEbox = document.querySelector('.front-end-box');
-
+const elements = document.querySelectorAll('body, .nav-bar, #blackout, .nav-links, .top-box, .top-H, .header-mid, .mid-H, .bottom-H, .description-paragraph, .works-button, .contact-button, .img-placeholder, .about-me, .about-txt, .about-header, .about-paragraph, .js-box, .html-box, .jvm-box, .my-toolbox, .skills-txt, .front-end-box, .grid-box, .html-lang-box, .css-lang-box, .js-lang-box, .back-end-box, .storage-box, .java-lang-box, .work-txt, .link-overlay, .social-icon, .combat-helper, .LU-java, .open-live-code-1, .open-github-1, .svelte-proj, .LU-svelte, .LU-css, .LU-ts, .orcrist-addon-proj');
 
 themeToggle.addEventListener('click', () => {
-    // Toggle theme on individual elements
-    body.classList.toggle('windowDown');
-    navBar.classList.toggle('windowDown');
-    blackoutLogo.classList.toggle('windowDown');
-    navLinks.classList.toggle('windowDown');
-    
-    // header
-    topBox.classList.toggle('windowDown');
-    headerMid.classList.toggle('windowDown');
-    midH.classList.toggle('windowDown');
-    description.classList.toggle('windowDown');
-    
-    workBtn.classList.toggle('windowDown');
-    contactBtn.classList.toggle('windowDown');
-
-    // About me
-    abtImg.classList.toggle('windowDown');
-    aboutMe.classList.toggle('windowDown');
-    aboutTxt.classList.toggle('windowDown');
-    aboutHeader.classList.toggle('windowDown');
-    aboutParagraph.classList.toggle('windowDown');
-    jsBtn.classList.toggle('windowDown');
-    htmlBtn.classList.toggle('windowDown');
-    jvmBtn.classList.toggle('windowDown');
-
-    // Skills
-
-    // Toggle for multiple elements (Lists)
-    linkOverlays.forEach(overlay => overlay.classList.toggle('windowDown'));
-    socialIcons.forEach(icon => icon.classList.toggle('windowDown'));
-
-    // Handle Icon Change & Animation
+    elements.forEach(el => el.classList.toggle('windowDown'));
     themeToggle.classList.toggle('is-filled');
 });
 
+if(isNight) {
+    elements.forEach(el => el.classList.toggle('windowDown'));
+    themeToggle.classList.toggle('is-filled');
+}
+
 // Functions
-getRepo();
+getGitInfo();
