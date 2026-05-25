@@ -142,27 +142,92 @@
               <a class="open-github-1" href="" target="_blank"> <img src="./assets/images/icons/github.svg" class="open-git-img-1" /> Code </a>
             </div>
             <div class="combat-helper-container">
-              <div class="p1-tag">project-1</div>
+              <div class="p1-tag">project-01</div>
               <img src="./assets/images/icons/proj-icon/shield - rogue.png" class="image-combat" />
             </div>
           </div>
         
           <div class="svelte-proj">
-            <span class="svelte-text">Svelte web</span> 
-            <p class="svelte-paragraph"></p>  
-            <div class="svelte-image-container">
-              <div class="p2-tag"> </div>
-              <img src="" class="image-svelte" />
+            <span class="svelte-H-text">Svelte Web</span>
+            <p class="svelte-paragraph">An online digital contact book where people can add or remove contacts from within the website itself.</p>
+            
+            <div class="LU-container"> 
+              <div  class="LU-svelte">svelte</div>
+              <div class="LU-css">css</div>
+              <div class="LU-ts">ts</div>
+            </div>
+
+            <div class="project-buttons"> 
+              <a class="open-live-code-1" href="https://svelte-web-production.up.railway.app/" target="_blank"> <img src="./assets/images/icons/accessory-icon/open live code.svg" class="open-code-img-1"/> Live </a> 
+              <a class="open-github-1" href="https://github.com/Blackoutxo/svelte-web" target="_blank"> <img src="./assets/images/icons/github.svg" class="open-git-img-1" /> Code </a>
+            </div>
+            <div class="svelte-container">
+              <img src="./assets/images/icons/proj-icon/contact-book.svg" class="svelte-img" />
+              <div class="p2-tag">project-02</div>
             </div>
           </div>
-      
-        </div>
+
+          <div class="orcrist-addon-proj">
+            <span class="orcrist-H-text">Orcrist Addon</span>
+            <p class="orcrist-paragraph">A port of my developing fabric mod based utility client into an addon for meteor client, an utility client.</p>
+            <div class="LU-java-3"> Java </div>
+
+            <div class="project-buttons-3">
+              <a class="open-live-code-1" href="https://github.com/Blackoutxo/Orcrist-addon" target="_blank"> <img src="./assets/images/icons/accessory-icon/open live code.svg" class="open-code-img-1"/> Live</a>
+              <a class="open-github-1" href="https://github.com/Blackoutxo/Orcrist-addon" target="_blank"> <img src="./assets/images/icons/github.svg" class="open-git-img-1" /> Code </a>
+            </div>
+
+            <div class="orcrist-container">
+              <div class="p3-tag">project-03</div>
+              <img src="./assets/images/icons/proj-icon/orcrist-brushed.png" class="orcrist-img" />
+            </div>
+          </div>
+
+        </div>        
       </main>
 
+      <!--- Contact --->
+      <main id="contact">
+        <div class="info-card">
+          <div class="top-card">04.Get in touch</div>
+          <div class="info-header">Let's <span class="info-H-build">Build</span><span class="info-H-it"> it!</span></div>
+          <div class="info-paragraph">I'm open to new ideas, send me an email to let me know!</div>
+        </div>
 
-    </section>  
+        <div class="mail-box">
+          <img src="./assets/images/icons/accessory-icon/mail icon.svg" class="mail-svg"/>
+          <div class="mail-box-text">E-mail</div>
+        </div>
 
-    <script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script> 
+        <div class="social-box">
+          <a class="github-social-button" href=""><img src="./assets/images/icons/github.svg" class="github-svg" /></a>
+          <a class="discord-social-button" href=""><img src="./assets/images/icons/discord.svg" class="discord-svg" /></a>
+          <span class="social-infer-text"> Socials</span>
+          <span class="social-box-text"> Github & Discord </span>
+        </div>
+
+        <div class="form-box">
+          <form id="forms" method="post" action="send.php">
+            <label for="name">FULL NAME</label>
+            <input type="text" id="name" name="name" placeholder=" NAME" required>
+
+            <label for="email">EMAIL ADDRESS</label>
+            <input type="email" id="email" name="email" placeholder=" EMAIL" required>
+
+            <label for="message">MESSAGE</label>
+            <textarea type="text" id="message" name="message" placeholder=" MESSAGE" required></textarea>
+          
+            <button class="submit-button"> Send 
+              <img class="mail-sent" src="./assets/images/icons/accessory-icon/mail icon.svg" alt="SENT"/>
+            </button>
+          </form>
+        </div>
+
+      </main>
+
+    </section>
+
+    <script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script>
     <script src="script.js" defer></script>
     </body>
 </html>

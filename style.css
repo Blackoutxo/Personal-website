@@ -2036,6 +2036,7 @@ textarea:focus {
     background-color: var(--neo);
 }
 
+/* Submit button */
 .submit-button {
     font-family: "Space Grotesk";
     font-weight: 600;
@@ -2055,6 +2056,14 @@ textarea:focus {
     transition: 0.1s ease-in-out;
 }
 
+.submit-button.clicked {
+    animation: submitBTN 1s ease-in-out;
+}
+
+.submit-button.clickOnly {
+    animation: clickNly 0.2s ease-in-out;
+}
+
 .mail-sent {
     width: 60px;
     height: 60px;
@@ -2064,48 +2073,52 @@ textarea:focus {
     display: none;
 }
 
-.mail-sent.animAFTH {
-    animation: 1s mailSentImg ease-in-out;
+.mail-sent.sentAnim {
+    animation: mailSent 0.9s ease-in-out;
 }
 
-.submit-button.clicked {
-    animation: 1s mailSentBG ease-in-out;
-}
-
-@keyframes mailSentImg {
-    0% {
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-    }
+@keyframes clickNly {
     50% {
-        transform: scale(1.01);
-    }
-    55% {
-        transform: scale(1.01);
-    }
-    60% {
-        transform: scale(1);
+        transform: translate(10px, 10px);
+        box-shadow: none;
     }
     100% {
-        opacity: 0;
     }
 }
 
-@keyframes mailSentBG {
+@Keyframes mailSent {
+    40% {
+        transform: scale(1.1);
+    }
+    60% {
+        transform: scale(1.1) rotate(3deg);
+    }
+    65% {
+        transform: scale(1.1) rotate(-3deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes submitBTN {
     0% {
         font-size: 0;
     }
     10% {
+        background-color: rgb(255, 251, 17);
         transform: translate(10px, 10px);
         box-shadow: none;
-        font-size: 0;
-        background-color: rgb(35, 209, 12);
     }
-    85% {
+    70% {
+        font-size: 0;
+    }
+    75% {
+        background-color: rgb(86, 205, 50);
         transform: translate(10px, 10px);
-        box-shadow: none;
+        box-shadow: none;    
+    }
+    90% {
         font-size: 0;
     }
     100% {

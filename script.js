@@ -101,5 +101,46 @@ if(isNight) {
     themeToggle.classList.toggle('is-filled');
 }
 
+// contact form
+const forms = document.querySelectorAll('#name, #email, #message');
+const subBtn = document.querySelector('.submit-button');
+const mailSent = document.querySelector('.mail-sent');
+let toggle = 0;
+
+mailSent.classList.add('hidden');
+
+subBtn.addEventListener('click', () => {
+    forms.forEach(form => {
+        if(form.value.trim() === '') {    
+            toggle = toggle === 0 ? 1 : 0;
+            subBtn.classList.toggle('clickOnly');
+        } else if (toggle === 1) {
+            subBtn.classList.remove('clickOnly');
+            subBtn.classList.add('clicked');
+            mailSent.classList.add('sentAnim');
+            mailSent.classList.remove('hidden');
+            console.log('tru');            
+        }
+    });
+
+//    if (toggle === 1) {
+//        subBtn.classList.add('clicked');
+//        mailSent.classList.add('sentAnim');
+//        mailSent.classList.remove('hidden');
+//        console.log('tru');
+//   }
+});
+
+subBtn.addEventListener('animationend', () => {
+    subBtn.classList.remove('clicked');
+});
+
+mailSent.addEventListener('animationend', () => {
+    mailSent.classList.remove('sentAnim');
+    mailSent.classList.add('hidden');    
+});
+
+
+
 // Functions
 getGitInfo();
