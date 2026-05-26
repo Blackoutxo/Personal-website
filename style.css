@@ -877,6 +877,12 @@ body.windowDown {
     transition: 0.2s ease-in-out;
 }
 
+.git-about-me.windowDown {
+    background-color: var(--bg-white);
+    outline: 6px solid var(--deep-maroon);
+    box-shadow: 10px 10px 0px 0px var(--deep-maroon);
+}
+
 .git-about-me:hover {
     transform: translate(10px, 10px);
     box-shadow: none;
@@ -896,6 +902,12 @@ body.windowDown {
     transition: 0.3s ease-in-out;
 }
 
+.git-info.windowDown {
+    background-color: var(--bg-dark);
+    outline: 6px solid var(--border-color-goldish);
+    box-shadow: 15px 15px 0px 0px var(--deep-maroon);
+}
+
 .git-info.hidden {
     transition: 0.3s ease-in-out;
 
@@ -903,11 +915,15 @@ body.windowDown {
 }   
 
 .git-repos {
+    color: var(--txt-white);
+    mix-blend-mode: difference;
     font-size: 2rem;
     font-weight: 600;
 }
 
 .git-followers {
+    color: var(--txt-white);
+    mix-blend-mode: difference;
     font-size: 2rem;
     font-weight: 600;
 }
