@@ -83,10 +83,7 @@
 
       <!---About me--->
       <main id="about">
-        <div class="img-placeholder">[Photo Here]</div>
-        <div class="git-info"> 
-          <p class="git-repos"> Repositories : <span class="git-repo-count">0</span></p>
-        </div>
+        <div class="img-placeholder"></div>
         <div class="about-me">
           <div class="about-txt">1. ABOUT ME</div>
           <div class="about-header">METICULOUS BY <span id="def-txt">DEFAULT</span></div>
@@ -95,6 +92,12 @@
           <img src="./assets/images/icons/language-icon/html.svg" class="html-box"/>
           <img src="./assets/images/icons/language-icon/java.svg" class="jvm-box" />
           <img src="./assets/images/icons/github.svg" class="git-about-me"/>
+          
+          <div class="git-info"> 
+            <p class="git-repos"> Repositories: <span class="git-repo-count">0</span></p>
+            <p class="git-followers"> Followers: <span class="git-follower-count">0</span></p>
+        </div>
+
         </div>
       </main>
 
@@ -158,8 +161,8 @@
             </div>
 
             <div class="project-buttons"> 
-              <a class="open-live-code-1" href="https://svelte-web-production.up.railway.app/" target="_blank"> <img src="./assets/images/icons/accessory-icon/open live code.svg" class="open-code-img-1"/> Live </a> 
-              <a class="open-github-1" href="https://github.com/Blackoutxo/svelte-web" target="_blank"> <img src="./assets/images/icons/github.svg" class="open-git-img-1" /> Code </a>
+              <a class="open-live-code-2" href="https://svelte-web-production.up.railway.app/" target="_blank"> <img src="./assets/images/icons/accessory-icon/open live code.svg" class="open-code-img-2"/> Live </a> 
+              <a class="open-github-2" href="https://github.com/Blackoutxo/svelte-web" target="_blank"> <img src="./assets/images/icons/github.svg" class="open-git-img-2" /> Code </a>
             </div>
             <div class="svelte-container">
               <img src="./assets/images/icons/proj-icon/contact-book.svg" class="svelte-img" />
@@ -173,8 +176,8 @@
             <div class="LU-java-3"> Java </div>
 
             <div class="project-buttons-3">
-              <a class="open-live-code-1" href="https://github.com/Blackoutxo/Orcrist-addon" target="_blank"> <img src="./assets/images/icons/accessory-icon/open live code.svg" class="open-code-img-1"/> Live</a>
-              <a class="open-github-1" href="https://github.com/Blackoutxo/Orcrist-addon" target="_blank"> <img src="./assets/images/icons/github.svg" class="open-git-img-1" /> Code </a>
+              <a class="open-live-code-3" href="https://github.com/Blackoutxo/Orcrist-addon" target="_blank"> <img src="./assets/images/icons/accessory-icon/open live code.svg" class="open-code-img-3"/> Live</a>
+              <a class="open-github-3" href="https://github.com/Blackoutxo/Orcrist-addon" target="_blank"> <img src="./assets/images/icons/github.svg" class="open-git-img-3" /> Code </a>
             </div>
 
             <div class="orcrist-container">
@@ -207,7 +210,9 @@
         </div>
 
         <div class="form-box">
-          <form id="forms" method="post" action="send.php">
+          <img class="send-icon" src="./assets/images/icons/accessory-icon/send-icon.svg" />
+          <form action="send-email-to-me" method="POST">
+
             <label for="name">FULL NAME</label>
             <input type="text" id="name" name="name" placeholder=" NAME" required>
 

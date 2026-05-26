@@ -26,6 +26,7 @@
     --bg-dark: rgb(0, 0, 0);
 
     --neo: rgb(0, 240, 255);
+    --neo-yellow: rgb(250, 213, 48);
 }
 
 :root.test {
@@ -117,14 +118,14 @@ body.windowDown {
 
 @keyframes openNav {
     0% {
-        top: -400px;
+        transform: translateY(-400px);
         box-shadow: none;
     }
-    80% {
+    85% {
         box-shadow: none;
     }
     100% {
-        top: 9px;
+        transform: translateY(0px);
     }
 }
 
@@ -356,10 +357,12 @@ body.windowDown {
 
 @keyframes topEntry {
     0% {
+        transform: translate(10px, 10px);
         box-shadow: none;
         opacity: 0;
     }
     85% {
+        transform: translate(10px, 10px);
         box-shadow: none;
     }
     100% {
@@ -612,14 +615,17 @@ body.windowDown {
 
 @keyframes riseDown {
     0% {
-        transform: translateY(50px);
+        transform: translateY(500px);
         box-shadow: none;
     }
     85% {
+        transform: translateY(0px);
+        transform: translate(15px, 15px);
         box-shadow: none;
     }
     100% {
-        transform: translateY(-2px);
+        transform: translate(15px, 15px);
+        transform: translateY(0px);
     }
 }
 
@@ -651,6 +657,8 @@ body.windowDown {
     transform: rotate(-2deg);
     transform-origin:center;
 
+    background-image: url('./assets/images/aboutmeimg.png');
+    background-size:cover;
     background-color: var(--bg-white);
     outline: 6px solid var(--border-color-dark);
     box-shadow: 20px 20px 0px 0px var(--border-color-dark);
@@ -664,6 +672,7 @@ body.windowDown {
 
 @keyframes imgPlaceHolderExpand {
     0% {
+        background-image: none;
         transform: scaleY(0);
         box-shadow: none;
         color: transparent;
@@ -672,6 +681,7 @@ body.windowDown {
         box-shadow: none;
         color: transparent;
         transform: scaleY(1);
+        background-image: none;
     }
     100% {
         transform: rotate(-2deg);
@@ -872,6 +882,36 @@ body.windowDown {
     box-shadow: none;
 }
 
+.git-info {
+    position: absolute;
+    top: 700px;
+    left: 900px;
+
+    padding-left: 10px;
+    padding-right: 100px;
+    outline: 6px solid var(--border-color-dark);
+    background-color: var(--bg-white);
+    box-shadow: 10px 10px 0px 0px var(--border-color-dark);
+
+    transition: 0.3s ease-in-out;
+}
+
+.git-info.hidden {
+    transition: 0.3s ease-in-out;
+
+    opacity: 0;
+}   
+
+.git-repos {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.git-followers {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
 /* -------------- Skills -------------- */
 #skills {
     display: flex;
@@ -898,7 +938,7 @@ body.windowDown {
 }
 
 .my-toolbox.anim {
-    animation: boxAnim 2s ease-in-out;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .my-toolbox.windowDown {
@@ -974,7 +1014,7 @@ body.windowDown {
 @keyframes boxAnim {
     0% {
         opacity: 0;
-        transform: translateY(5px);
+        transform: translateY(100px);
         box-shadow: none;
     }
     85% {
@@ -982,7 +1022,7 @@ body.windowDown {
     }
     100% {
         opacity: 1;
-        transform: translateY(-1px);
+        transform: translateY(0px);
     }
 }
 
@@ -1176,7 +1216,7 @@ body.windowDown {
 #projects {
     display: flex;
 
-    width: 100vw;
+    width: 136vw;
     height: 140vh;
 
     position: absolute;
@@ -1219,7 +1259,7 @@ body.windowDown {
 
     position: absolute;
     top: 300px;
-    left: 1000px;
+    left: 900px;
 }
 
 /* PROJECT NUMERO UNO  */
@@ -1243,7 +1283,7 @@ body.windowDown {
 }
 
 .combat-helper.anim {
-    animation: animateCard 2s ease-in-out;
+    animation: animateCard 1s forwards;
 }
 
 .combat-H-text {
@@ -1261,7 +1301,7 @@ body.windowDown {
 }
 
 .combat-H-text.anim {
-    animation: fadeIn 2.5s ease-in-out;
+    animation: fadeIn 1.6s ease-in-out;
 
 }
 
@@ -1280,7 +1320,7 @@ body.windowDown {
 }
 
 .combat-paragraph.anim {
-    animation: fadeIn 2.5s ease-in-out;
+    animation: fadeIn 1.6s ease-in-out;
 }
 
 .LU-java {
@@ -1298,7 +1338,7 @@ body.windowDown {
 }
 
 .LU-java.anim {
-    animation: fadeIn 2.5s ease-in-out;
+    animation: fadeIn 1.6s ease-in-out;
 }
 
 .LU-java.windowDown {
@@ -1346,7 +1386,7 @@ body.windowDown {
 
 .open-live-code-1.anim {
     animation: 
-    fadeIn 2.5s ease-in-out;
+    fadeIn 1.6s ease-in-out;
 }
 
 .open-live-code-1:active {
@@ -1389,7 +1429,7 @@ body.windowDown {
 }
 
 .open-github-1.anim {
-    animation: fadeIn 2.5s ease-in-out;
+    animation: fadeIn 1.6s ease-in-out;
 }
 
 .open-github-1:active {
@@ -1413,7 +1453,7 @@ body.windowDown {
 }
 
 .combat-helper-container.anim {
-    animation: fadeIn 2.5s ease-in-out;
+    animation: fadeIn 1.6s ease-in-out;
 }
 
 .p1-tag {
@@ -1434,7 +1474,7 @@ body.windowDown {
 }
 
 .p1-tag.anim {
-    animation: fadeIn 2.5s ease-in-out;
+    animation: fadeIn 1.6s ease-in-out;
 }
 
 .image-combat {
@@ -1447,7 +1487,7 @@ body.windowDown {
 }
 
 .image-combat.anim {
-    animation: fadeIn 2.5s ease-in-out;
+    animation: fadeIn 1.6s ease-in-out;
 }
 
 .image-combat:hover {
@@ -1479,7 +1519,7 @@ body.windowDown {
 }
 
 .svelte-proj.anim {
-    animation: animateCard 2s ease-in-out;
+    animation: animateCard 1s forwards;
 }
 
 /* Text header*/
@@ -1498,7 +1538,7 @@ body.windowDown {
 }
 
 .svelte-H-text.anim {
-    animation: fadeIn 2.5s ease-in-out;
+    animation: fadeIn 1.6s ease-in-out;
 }
 
 .svelte-paragraph {
@@ -1516,7 +1556,7 @@ body.windowDown {
 }
 
 .svelte-paragraph.anim {
-    animation: fadeIn 2.5s ease-in-out;
+    animation: fadeIn 1.6s ease-in-out;
 }
 
 .LU-container {
@@ -1534,7 +1574,7 @@ body.windowDown {
 }
 
 .LU-container.anim {
-    animation: fadeIn 2.5s ease-in-out;
+    animation: fadeIn 1.6s ease-in-out;
 }
 
 .LU-svelte, .LU-css, .LU-ts {
@@ -1551,6 +1591,88 @@ body.windowDown {
     outline: 6px solid var(--accent-card);
 }
 
+.open-live-code-2 {
+    display: flex;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    
+    font-size: 1.6rem;
+    font-weight: 800;
+
+    padding: 20px 40px;
+    outline: 6px solid var(--border-color-dark);
+    background-color: var(--accent-card);
+    box-shadow: 15px 15px 1px 2px var(--border-color-dark);
+
+    color: black;
+
+    transition: 0.1s ease-in-out;
+}
+
+.open-code-img-2 {
+    transform: translateX(-10px);
+}
+
+.open-live-code-2.windowDown {
+    outline: 6px solid var(--deep-maroon);
+    box-shadow: 15px 15px 1px 2px var(--deep-maroon);
+}
+
+.open-live-code-2.anim {
+    animation: 
+    fadeIn 1.6s ease-in-out;
+}
+
+.open-live-code-2:active {
+    transform: translate(15px, 15px);
+    box-shadow: none;
+}
+
+/* GITHUB button p2 */
+.open-github-2 {
+    display: flex;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    
+    font-size: 1.6rem;
+    font-weight: 800;
+
+    padding: 20px 35px;
+    outline: 6px solid var(--border-color-dark);
+    background-color: var(--bg-white);
+    box-shadow: 15px 15px 1px 2px var(--border-color-dark);
+
+    color: black;
+
+    transition: 0.1s ease-in-out;
+}
+
+.open-git-img-2 {
+    width: 30px;
+    height: 30px;
+
+    transform: translateX(-10px);
+}
+
+.open-github-2.windowDown {
+    outline: 6px solid var(--deep-navy);
+    background-color: var(--vibrant-blue);
+    box-shadow: 15px 15px 1px 2px var(--deep-navy);
+}
+
+.open-github-2.anim {
+    animation: fadeIn 1.6s ease-in-out;
+}
+
+.open-github-2:active {
+    transform: translate(15px, 15px);
+    box-shadow: none;
+}
+
 /* Image container 2*/
 .svelte-container {
     display: flex;
@@ -1565,7 +1687,7 @@ body.windowDown {
 }
 
 .svelte-container.anim {
-    animation: fadeIn 2.5s ease-in-out;
+    animation: fadeIn 1.6s ease-in-out;
 }
 
 .p2-tag {
@@ -1586,7 +1708,7 @@ body.windowDown {
 }
 
 .p2-tag.anim {
-    animation: fadeIn 2.5s ease-in-out;
+    animation: fadeIn 1.6s ease-in-out;
 }
 
 .svelte-img {
@@ -1602,7 +1724,7 @@ body.windowDown {
 }
 
 .svelte-img.anim {
-    animation: fadeIn 2.5s ease-in-out;
+    animation: fadeIn 1.6s ease-in-out;
 }
 
 .svelte-img:hover {
@@ -1636,7 +1758,7 @@ body.windowDown {
 }
 
 .orcrist-addon-proj.anim {
-    animation: animateCard 2s ease-in-out;
+    animation: animateCard 1s forwards;
 }
 
 /* Texts & things */
@@ -1655,7 +1777,7 @@ body.windowDown {
 }
 
 .orcrist-H-text.anim {
-    animation: fadeIn 2.5s ease-in-out;
+    animation: fadeIn 1.6s ease-in-out;
 }
 
 .orcrist-paragraph {
@@ -1673,7 +1795,7 @@ body.windowDown {
 }
 
 .orcrist-paragraph.anim {
-    animation: fadeIn 2.5s ease-in-out;
+    animation: fadeIn 1.6s ease-in-out;
 }
 
 .LU-java-3 {
@@ -1691,7 +1813,7 @@ body.windowDown {
 }
 
 .LU-java-3.anim {
-    animation: fadeIn 2.5s ease-in-out;
+    animation: fadeIn 1.6s ease-in-out;
 }
 
 .project-buttons-3 {
@@ -1702,6 +1824,83 @@ body.windowDown {
     left: 890px;
 
     gap: 50px;
+}
+
+.project-buttons-3.anim {
+    animation: fadeIn 1.6s ease-in-out;
+}
+
+.open-live-code-3 {
+    display: flex;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    
+    font-size: 1.6rem;
+    font-weight: 800;
+
+    padding: 20px 40px;
+    outline: 6px solid var(--border-color-dark);
+    background-color: var(--accent-card);
+    box-shadow: 15px 15px 1px 2px var(--border-color-dark);
+
+    color: black;
+
+    transition: 0.1s ease-in-out;
+}
+
+.open-code-img-3 {
+    transform: translateX(-10px);
+}
+
+.open-live-code-3.windowDown {
+    outline: 6px solid var(--deep-maroon);
+    box-shadow: 15px 15px 1px 2px var(--deep-maroon);
+}
+
+.open-live-code-3:active {
+    transform: translate(15px, 15px);
+    box-shadow: none;
+}
+
+/* GITHUB button p3 */
+.open-github-3 {
+    display: flex;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    
+    font-size: 1.6rem;
+    font-weight: 800;
+
+    padding: 20px 35px;
+    outline: 6px solid var(--border-color-dark);
+    background-color: var(--bg-white);
+    box-shadow: 15px 15px 1px 2px var(--border-color-dark);
+
+    color: black;
+
+    transition: 0.1s ease-in-out;
+}
+
+.open-git-img-3 {
+    width: 30px;
+    height: 30px;
+
+    transform: translateX(-10px);
+}
+
+.open-github-3.windowDown {
+    outline: 6px solid var(--deep-navy);
+    background-color: var(--vibrant-blue);
+    box-shadow: 15px 15px 1px 2px var(--deep-navy);
+}
+
+.open-github-3:active {
+    transform: translate(15px, 15px);
+    box-shadow: none;
 }
 
 /* Image container 3*/
@@ -1724,7 +1923,7 @@ body.windowDown {
 }
 
 .orcrist-container.anim {
-    animation: fadeIn 2.5s ease-in-out;
+    animation: fadeIn 1.6s ease-in-out;
 }
 
 .orcrist-img {
@@ -1747,7 +1946,7 @@ body.windowDown {
 }
 
 .orcrist-img.anim {
-    animation: fadeIn 2.5s ease-in-out;
+    animation: fadeIn 1.6s ease-in-out;
 }
 
 .p3-tag {
@@ -1768,18 +1967,15 @@ body.windowDown {
 }
 
 .p3-tag.anim {
-    animation: fadeIn 2.5s ease-in-out;
+    animation: fadeIn 1.6s ease-in-out;
 }
 
 /* Projects card animation */
 @keyframes animateCard {
     0% {
-        width: 1px;
-        height: 900px;
     }
     100% {
-        width: 1800px;
-        height: 900px;
+        transform: translateY(-100px);
     }
 }
 
@@ -1812,6 +2008,39 @@ body.windowDown {
     transition: 0.2s ease-in-out;
 }
 
+.info-card.anim {
+    animation: slideInLeft 1s ease-in-out;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-200px);
+        box-shadow: none;
+    }
+    50% {
+        transform: translate(0px);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    80% {
+        transform: scale(1);
+    }
+    100% {
+        transform: rotate(-3deg);
+    }
+}
+
+.info-card.windowDown {
+    outline: 6px solid var(--border-color-goldish);
+    box-shadow: 15px 15px 0px 0px var(--vibrant-blue);
+}
+
+.info-card.windowDown:hover {
+    transform: translate(-10px, -10px) rotate(-3deg);
+    box-shadow: 20px 20px 0px 0px var(--neo);
+}
+
 .info-card:hover {
     transform: translate(-10px, -10px) rotate(-3deg);
     box-shadow: 20px 20px 0px 0px var(--border-color-dark);
@@ -1833,6 +2062,10 @@ body.windowDown {
     font-size: 1.48rem;
 }
 
+.top-card.anim {
+    animation: fadeIn 1.3s ease-in-out;
+}
+
 .info-header {
     position: absolute;
     top: 110px;
@@ -1845,6 +2078,10 @@ body.windowDown {
     font-size: 8rem;
 
     color: var(--txt-white);
+}
+
+.info-header.anim {
+    animation: fadeIn 1.4s ease-in-out;
 }
 
 .info-H-build {
@@ -1873,6 +2110,10 @@ body.windowDown {
     color: var(--txt-white);
 }
 
+.info-paragraph.anim {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
 /* email box*/
 .mail-box {
     position: absolute;
@@ -1885,6 +2126,40 @@ body.windowDown {
     background-color: rgb(250, 213, 48);
     outline: 6px solid var(--border-color-dark);
     box-shadow: 15px 15px 0px 0px var(--border-color-dark);
+
+    transition: 0.2s ease-in-out;
+}
+
+.mail-box.anim {
+    animation: slideUp 1s ease-in-out;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(500px);
+        box-shadow: none;
+    }
+    90% {
+        box-shadow: none;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.mail-box.windowDown {
+    outline: 6px solid var(--vibrant-blue);
+    box-shadow: 15px 15px 0px 0px var(--vibrant-blue);
+}
+
+.mail-box.windowDown:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 25px 25px 0px 0px var(--neo);    
+}
+
+.mail-box:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 25px 25px 0px 0px var(--border-color-dark);
 }
 
 .mail-svg {
@@ -1896,6 +2171,10 @@ body.windowDown {
     height: 60px;
 }
 
+.mail-svg.anim {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
 .mail-box-text {
     position: absolute;
     top: 85px;
@@ -1904,6 +2183,10 @@ body.windowDown {
     font-size: 1.5rem;
     font-weight: 800;
     text-transform: uppercase;
+}
+
+.mail-box-text.anim {
+    animation: fadeIn 1.3s ease-in-out;
 }
 
 /* social box */
@@ -1918,6 +2201,28 @@ body.windowDown {
     background-color: rgb(255, 255, 255);
     outline: 6px solid var(--border-color-dark);
     box-shadow: 15px 15px 0px 0px var(--border-color-dark);
+
+    transition: 0.2s ease-in-out;
+}
+
+.social-box.anim {
+    animation: slideUp 1.2s ease-in-out;
+}
+
+.social-box.windowDown {
+    background-color: var(--bg-dark);
+    outline: 6px solid var(--vibrant-blue);
+    box-shadow: 15px 15px 0px 0px var(--vibrant-blue);
+}
+
+.social-box:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 20px 20px 0px 0px var(--border-color-dark);
+}
+
+.social-box.windowDown:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 20px 20px 0px 0px var(--neo); 
 }
 
 .github-social-button {
@@ -1929,6 +2234,15 @@ body.windowDown {
 
     padding: 5px 5px;
     outline: 5px solid var(--border-color-dark);
+}
+
+.github-social-button.anim {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.github-social-button.windowDown {
+    background-color: var(--bg-white);
+    outline: 5px solid var(--vibrant-blue);
 }
 
 .github-svg {
@@ -1946,6 +2260,14 @@ body.windowDown {
     outline: 5px solid var(--border-color-dark);
 }
 
+.discord-social-button.anim {
+    animation: fadeIn 1.3s ease-in-out;
+}
+
+.discord-social-button.windowDown {
+    outline: 5px solid var(--vibrant-blue);
+}
+ 
 .discord-svg {
     width: 50px;
     height: 50px;
@@ -1956,8 +2278,15 @@ body.windowDown {
     top: 100px;
     left: 30px;
 
+    color: var(--txt-white);
+    mix-blend-mode: difference;
+
     font-size: 1.5rem;
     font-weight: 600;
+}
+
+.social-infer-text.anim {
+    animation: fadeIn 1.4s ease-in-out;
 }
 
 .social-box-text {
@@ -1965,11 +2294,45 @@ body.windowDown {
     top: 150px;
     left: 30px;
 
+    color: var(--txt-white);
+    mix-blend-mode: difference;
+
     font-size: 1.7rem;
     font-weight: 600;
 }
 
+.social-box-text.anim {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
 /* Contact form */
+.send-icon {
+    position: absolute;
+    left: 975px;
+    bottom: 850px;
+
+    width: 50px;
+    height: 50px;
+
+    transform: rotate(-60deg);
+
+    padding: 20px 0px;
+    outline: 6px solid var(--border-color-dark);
+    background-color: rgb(250, 213, 48);
+    box-shadow: -13px 13px 0px 0px var(--border-color-dark);
+
+    z-index: 4;
+}
+
+.send-icon.anim {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.send-icon.windowDown {
+    outline: 6px solid var(--deep-navy);
+    box-shadow: -13px 13px 0px 0px var(--vibrant-blue);
+}
+
 .form-box {
     display: flex;
 
@@ -1982,8 +2345,33 @@ body.windowDown {
 
     background-color: white;
     outline: 8px solid var(--border-color-dark);
-
     box-shadow: 20px 20px 0px 0px var(--border-color-dark);
+
+    transition: var(--animTime);
+}
+
+.form-box.anim {
+    animation: slideRight 1s ease-in-out;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(500px);
+        box-shadow: none;
+    }
+
+    85% {
+        box-shadow: none;
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.form-box.windowDown {
+    background-color: var(--bg-dark);
+    outline: 8px solid var(--vibrant-blue);
+    box-shadow: 20px 20px 0px 0px var(--vibrant-blue);
 }
 
 form {
@@ -1994,6 +2382,10 @@ form {
     padding: 55px;
 }
 
+form.anim {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
 label {
     display: block;
 
@@ -2002,7 +2394,12 @@ label {
 
     font-size: 1.6rem;
     font-weight: 800;
-    color: black;
+    color: var(--txt-white);
+    mix-blend-mode: difference;
+}
+
+label.anim {
+    animation: fadeIn 1.3s ease-in-out;
 }
 
 input[type="text"],
@@ -2024,7 +2421,22 @@ textarea {
     transition: 0.2s ease-in-out;
 }
 
+input[type="text"].anim,
+input[type="email"].anim,
+textarea.anim {
+    animation: fadeIn 1.3s ease-in-out;
+}
+
+input[type="text"].windowDown,
+input[type="email"].windowDown,
+textarea.windowDown { 
+    outline: 4px solid var(--vibrant-blue);
+    background-color: rgb(85, 85, 85);
+}
+
 textarea {
+    overflow:hidden;
+
     resize: none;
     height: 180px;
 }
@@ -2034,6 +2446,13 @@ input[type="email"]:focus,
 textarea:focus {
     box-shadow: 12px 12px 0px 0px var(--border-color-dark);
     background-color: var(--neo);
+}
+
+input[type="text"].windowDown:focus,
+input[type="email"].windowDown:focus,
+textarea.windowDown:focus {
+    box-shadow: 12px 12px 0px 0px var(--neo);
+    background-color: var(--neo-yellow);
 }
 
 /* Submit button */
@@ -2054,6 +2473,26 @@ textarea:focus {
     background-color: var(--accent-card);
 
     transition: 0.1s ease-in-out;
+}
+
+.submit-button.anim {
+    animation: NoShadow 1.7s ease-in-out;
+}
+
+@keyframes NoShadow {
+    0% {
+        transform: translate(10px, 10px);
+        box-shadow: none;
+    }
+    85% {
+        transform: translate(10px, 10px);
+        box-shadow: none;
+    }
+}
+
+.submit-button.windowDown {
+    outline: 4px solid var(--vibrant-blue);
+    box-shadow: 10px 10px 0px 0px var(--vibrant-blue);
 }
 
 .submit-button.clicked {
@@ -2106,7 +2545,7 @@ textarea:focus {
         font-size: 0;
     }
     10% {
-        background-color: rgb(255, 251, 17);
+        background-color: rgb(57, 255, 17);
         transform: translate(10px, 10px);
         box-shadow: none;
     }
@@ -2114,7 +2553,7 @@ textarea:focus {
         font-size: 0;
     }
     75% {
-        background-color: rgb(86, 205, 50);
+        background-color: rgb(57, 255, 17);
         transform: translate(10px, 10px);
         box-shadow: none;    
     }
