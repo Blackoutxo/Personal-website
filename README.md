@@ -39,6 +39,8 @@
 
 ## Dark theme
 ## Local time theme management
+## Background body grid
+## Github Api
 
 ## Dark theme
 ### When an user presses the little window icon in the navigation bar then it plays a little animation to let you know its on. All the elements having dark theme have class called ***windowDown*** which is then added when clicked on the window icon with the help of js.
@@ -48,6 +50,9 @@
 
 ## Background Body grid
 ### The background body grid was made with the help of ***background-image*** which made use of linear gradient which can easily be seen in the initially written codes of ___style.css___ in the **body {}**
+
+## Github api
+### Github api is used to fetch and display the data of my profile in the about me section when the big ol' github button is clicked which lies on the bottom right side.
 
 
 ### Original readme featured "This is a website made by me for me, looked kinda cute might delete later." 
