@@ -159,7 +159,7 @@ observeOct.observe(document.querySelector('.orcrist-addon-proj'));
 
 // ----- Contact section -----//
 const observerContact = new IntersectionObserver(([entry]) => {
-    const targets = document.querySelectorAll('.info-card, .top-card, .info-header, .info-paragraph, .mail-box, .mail-svg, .mail-box-text, .social-box, .github-social-button, .discord-social-button, .social-infer-text, .social-box-text, .form-box, .send-icon, form, label, input, textarea, .submit-button');
+    const targets = document.querySelectorAll('.info-card, .top-card, .info-header, .info-paragraph, .mail-box, .mail-svg, .mail-box-text, .email, .social-box, .github-social-button, .discord-social-button, .social-infer-text, .social-box-text, .form-box, .send-icon, form, label, input, textarea, .submit-button');
     targets.forEach(el => el.classList.toggle('anim', entry.isIntersecting));
 }, {threshold: 0.1});
 
