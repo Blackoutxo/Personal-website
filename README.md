@@ -58,3 +58,5 @@
 ### Original readme featured "This is a website made by me for me, looked kinda cute might delete later." 
 
 ### Thank you for reading!
+
+### P.S The burger menu for smaller devices will be added later on.
