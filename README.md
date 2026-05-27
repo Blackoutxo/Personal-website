@@ -1,13 +1,22 @@
 # Personal website
-### It is a personal website made specifically for those who want to find some information about me or what im capable of and what I can and cannot do.
+### It is a personal website made specifically for those who want to find some information about me or what im capable of and what I can and cannot do. As I had a domain unused and lacking a portfolio website I decided to start making this website and learn as I go.
 
 ### This website consists of 5 sections
 
 ## 1.[Home](#-Home)
+<img width="1353" height="615" alt="image" src="https://github.com/user-attachments/assets/b34dfe8f-7458-4e24-b62d-42b89dd38638" />
+
 ## 2.[About](#-About)
+<img width="1345" height="611" alt="image" src="https://github.com/user-attachments/assets/57494e54-b97c-4ec9-affe-88a3e45c49df" />
+
 ## 3.[Skills](#-Skills)
+<img width="1350" height="615" alt="image" src="https://github.com/user-attachments/assets/e51b494f-ea3f-41a9-b02b-33b8c8486787" />
+
 ## 4.[Projects](#-Projects)
+<img width="1351" height="608" alt="image" src="https://github.com/user-attachments/assets/2393fc49-c588-4b4c-8d62-cc6d1224974c" />
+
 ## 5.[Contact](#-Contact)
+<img width="1346" height="611" alt="image" src="https://github.com/user-attachments/assets/81193a46-f7eb-436d-bd79-6fdac4e38509" />
 
 ### This website was made with little to no help from AI, genuinely made by my hands.
 
@@ -30,12 +39,20 @@
 
 ## Dark theme
 ## Local time theme management
+## Background body grid
+## Github Api
 
 ## Dark theme
 ### When an user presses the little window icon in the navigation bar then it plays a little animation to let you know its on. All the elements having dark theme have class called ***windowDown*** which is then added when clicked on the window icon with the help of js.
 
 ## Local time theme management
 ### This website features (2 theme) based on local time of user set in the browser. When the clock hits 6pm the website automatically changes into dark theme to better help user's eye to lessen eye strain so the user have it easy when viewing the website.
+
+## Background Body grid
+### The background body grid was made with the help of ***background-image*** which made use of linear gradient which can easily be seen in the initially written codes of ___style.css___ in the **body {}**
+
+## Github api
+### Github api is used to fetch and display the data of my profile in the about me section when the big ol' github button is clicked which lies on the bottom right side.
 
 
 ### Original readme featured "This is a website made by me for me, looked kinda cute might delete later." 
