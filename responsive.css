@@ -35,26 +35,6 @@
     }
 
     /* NAV BAR*/
-    /*.burger-menu {
-        position: fixed !important;
-        top: 20px !important;
-        right: 20px !important;
-
-        width: 70px;
-        height: 70px;
-
-        padding: 20px 20px;
-        outline: 6px solid var(--border-color-dark);
-        box-shadow: 12px 12px 0px 0px var(--border-color-dark);
-        background-color: var(--neo-yellow);
-
-        z-index: 999;
-    }*/
-
-    .nav-bar.burgerized {
-
-    }
-
     .nav-bar {
         position: fixed !important;
         left: 20px !important;
@@ -827,3 +807,78 @@
 }
 
 /* More fine tuning */
+@media screen and (max-width: 480px) {
+
+    .nav-bar {
+        padding: 10px 12px !important;
+        gap: 8px !important;
+        width: calc(100% - 28px) !important;
+        left: 14px !important;
+    }
+
+    #blackout {
+        font-size: 1.05rem !important;
+    }
+
+    .nav-links {
+        font-size: 0.75rem !important;
+        gap: 8px !important;
+    }
+
+    .nav-socials {
+        gap: 8px !important;
+    }
+
+    .social-icon {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .social-icon img {
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    .material-symbols-outlined {
+        font-size: 32px !important;
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    #title {
+        margin-top: 170px !important;
+    }
+
+    .top-box {
+        font-size: 0.8rem !important;
+    }
+
+    .about-me {
+        min-height: 420px !important;
+    }
+
+    .about-header {
+        font-size: clamp(1.5rem, 5vw, 2.2rem) !important;
+    }
+
+    .about-paragraph {
+        top: 140px !important;
+        font-size: 0.95rem !important;
+    }
+
+    .git-repos, .git-followers {
+        font-size: 1rem !important;
+    }
+
+    .combat-H-text, .svelte-H-text, .orcrist-H-text {
+        font-size: clamp(1.5rem, 5vw, 2.2rem) !important;
+    }
+
+    .info-card {
+        min-height: 260px !important;
+    }
+
+    .info-header {
+        font-size: clamp(2rem, 7vw, 3.5rem) !important;
+    }
+}
