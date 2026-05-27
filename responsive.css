@@ -35,6 +35,26 @@
     }
 
     /* NAV BAR*/
+    /*.burger-menu {
+        position: fixed !important;
+        top: 20px !important;
+        right: 20px !important;
+
+        width: 70px;
+        height: 70px;
+
+        padding: 20px 20px;
+        outline: 6px solid var(--border-color-dark);
+        box-shadow: 12px 12px 0px 0px var(--border-color-dark);
+        background-color: var(--neo-yellow);
+
+        z-index: 999;
+    }*/
+
+    .nav-bar.burgerized {
+
+    }
+
     .nav-bar {
         position: fixed !important;
         left: 20px !important;
@@ -405,7 +425,7 @@
 
         position: relative !important;
         left: 0 !important;
-        top: 0 !important;
+        top: 500px !important;
 
         width: 100% !important;
         height: auto !important;
@@ -424,11 +444,11 @@
         display: block;
 
         font-family: "Space Grotesk";
-        font-size: clamp (10rem, 8vw, 4rem);
+        font-size: clamp(10rem, 8vw, 4rem);
         font-weight: 800;
         text-transform: uppercase;
 
-        color: var(--txt-dark);
+        color: black;
         margin-bottom: 100px !important;
         letter-spacing: -0.05rem;
     }
@@ -457,6 +477,8 @@
         width: 100% !important;
         height: 20% !important;
 
+        margin-bottom: 60px !important;
+
         box-shadow: 10px 10px 0px 0px var(--border-color-dark) !important;
     }
 
@@ -464,7 +486,7 @@
         position: relative !important;
 
         width: 100% !important;
-        height: 200px !important;
+        height: 300px !important;
 
         order: -1 !important;
         
@@ -475,7 +497,7 @@
         position: relative !important;
 
         width: 100% !important;
-        height: 200px !important;
+        height: 300px !important;
 
         order: -1 !important;
         overflow: hidden !important;
@@ -486,7 +508,7 @@
         position: relative !important;
 
         width: 100% !important;
-        height: 200px !important;
+        height: 300px !important;
 
         order: -1 !important;
         overflow: hidden !important;
@@ -498,7 +520,7 @@
     .image-combat,
     .svelte-img {
         width: 100% !important;
-        height: 200px !important;
+        height: 300px !important;
         object-fit: contain !important;
     }
 
@@ -506,7 +528,7 @@
         position: relative !important;
 
         width: 100% !important;
-        height: 200px !important;
+        height: 300px !important;
 
         object-fit: contain !important;
         z-index: 1 !important;
@@ -524,7 +546,7 @@
         top: auto !important;
         left:  auto !important;
 
-        font-size: clamp (7rem, 5vw, 2.8rem) !important;
+        font-size: clamp(7rem, 5vw, 2.8rem) !important;
         letter-spacing: -0.1rem !important;
         padding: 18px 20px !important;
     }
@@ -576,14 +598,16 @@
 
     .open-live-code-1, .open-live-code-2, .open-live-code-3 {
         font-size: 2.5rem !important;
-        padding: 10px 16px !important;
-        box-shadow: 6px 6px 0px 0px var(--border-color-dark) !important;
+        padding-right: 10px !important;
+        padding: 10px 30px !important;
+        justify-content: center !important;
+        box-shadow: 10px 10px 0px 0px var(--border-color-dark) !important;
     } 
 
     .open-github-1, .open-github-2, .open-github-3 {
         font-size: 2.5rem !important;
         padding: 10px 16px !important;
-        box-shadow: 6px 6px 0px 0px var(--border-color-dark) !important;
+        box-shadow: 10px 10px 0px 0px var(--border-color-dark) !important;
     }
     
     .open-live-code-1:active, .open-live-code-2:active, .open-live-code-3:active,
@@ -603,7 +627,7 @@
 
         position: relative !important;
         left: 0 !important;
-        top: 200px !important;
+        top: 800px !important;
 
         width: 100% !important;
         height: auto !important;
@@ -671,7 +695,7 @@
 
         position: absolute !important;
         top: auto !important;
-        left: 3% !important;
+        left: 2% !important;
 
         margin-left: 12px !important;
     }
@@ -802,4 +826,4 @@
     }
 }
 
-
+/* More fine tuning */
