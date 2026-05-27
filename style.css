@@ -59,13 +59,10 @@
 /* -------------- Body -------------- */
 body {
     display: flex;
-    zoom: 67%;
-
-    overflow: hidden;
+    zoom: 67% !important;
 
     transition: var(--animTime);
-
-    animation: gridAnimate 2s ease-in forwards;
+    overflow: hidden;
 
     background-size: 60px 60px;
     background-color: var(--bg-white);
@@ -83,23 +80,28 @@ body.windowDown {
 }
 
 .elements-horizontal {
-  position: relative;
-  height: 150vh;
-  overflow: hidden;
+    display: flex;
 
-  scroll-snap-align: initial;
+    align-content: center;
+    justify-content: center;
+
+    position: relative;
+    height: 150vh;
+    overflow: hidden;
+  
+    scroll-snap-align: initial;
 }
 
 /* -------------- Nav Bar -------------- */
 .nav-bar {
-    width: 96vw;
+    width: 70%;
     height: 110px;
     margin: 30px auto 0;
 
     position: fixed;
     display: flex;
     justify-self: center;
-    left: 25vw;
+    left: 22vw;
 
     align-items: center;
     justify-content: space-between;
@@ -323,9 +325,10 @@ body.windowDown {
 
 /* -------------- Title / Header -------------- */
 
-#title {
+#title { 
     height: 140vh;
     width: 150vw;
+    margin-top: 100px;
 
     align-content: center;
 }
@@ -345,8 +348,8 @@ body.windowDown {
 
     font-family:"Space Grotesk";
     font-size: 1.6rem;
-    width: 350px;
-    height: 60px;
+    width: 11.5%;
+    height: 4.5%;
 
     animation: 
     topEntry 1s ease-in-out forwards,
@@ -412,6 +415,9 @@ body.windowDown {
 .top-H {
     stroke: black;
     fill: black;
+
+    width:75%;
+    height: 12%;
     
     stroke-width: 2px;
     stroke-dasharray: 6000;
@@ -443,8 +449,8 @@ body.windowDown {
 }
 
 .mid-H {
-    width: 500px;
-    height: 160px;
+    width: 33%;
+    height: 162px;
 
     stroke: black;
     stroke-width: 4px;
@@ -483,6 +489,9 @@ body.windowDown {
 .bottom-H {
     stroke: black;
     fill: black;
+
+    width:1600px;
+    height:165px;
     
     stroke-width: 2px;
     stroke-dasharray: 6000;
@@ -501,8 +510,8 @@ body.windowDown {
 
 /* Description paragraph */
 .description-paragraph {
-    width: 1500px;
-    height: 150px;
+    width: 50%;
+    height: 10%;
 
     align-self: center;
     justify-self: center;
@@ -546,8 +555,10 @@ body.windowDown {
 /* Bottom Buttons */
 .bottom-buttons {
     display: flex;
-    position: absolute;
-    left: 1300px;
+
+    width: 50%;
+    justify-self: center;
+    justify-content: center;
 
     animation: slideUp 1s ease-in-out;
 
@@ -632,26 +643,25 @@ body.windowDown {
 /* -------------- About Me -------------- */
 #about {
     display: flex;
+    flex-direction:row;
 
     position: absolute;
-    left: 3000px;
+    left: 3200px;
     top: 0;
 
-    width: 150vw;
-    height: 140vh;
+    justify-content: center;
+    align-items: center;
+
+    gap: 100px;
+
+    width:150vw;
+    height: 150vh;
 }
 
 .img-placeholder {
-    display: flex;
 
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 100px;
-    left: 500px;
-
-    width: 800px;
-    height: 1100px;
+    width: 28%;
+    height: 80%;
     font-size: 4rem;
 
     transform: rotate(-2deg);
@@ -664,6 +674,8 @@ body.windowDown {
     box-shadow: 20px 20px 0px 0px var(--border-color-dark);
 
     transition: 0.1s ease-in-out;
+
+    z-index: 2;
 }
 
 .img-placeholder.anim {
@@ -705,13 +717,10 @@ body.windowDown {
 }
 
 .about-me {
-    position: relative;
-    top: 300px;
-    left: 1400px;
+    flex-direction: right;
 
-    display: flex;
-    width: 1400px;
-    height: 800px;
+    width: 45.8%;
+    height: 57%;
 
     transform: rotate(1.5deg);
 
@@ -733,9 +742,9 @@ body.windowDown {
 }
 
 .about-txt {
-    position: absolute;
-    top: 70px;
-    left: 70px;
+    position:absolute;
+    top: 10%;
+    left: 6%;
 
     width: 160px;
     height: 30px;
@@ -757,10 +766,10 @@ body.windowDown {
 
 .about-header {
     position: absolute;
-    top: 130px;
-    left: 70px;
+    top: 16%;
+    left: 5%;
 
-    font-size: 6rem;
+    font-size: clamp(1.6rem, 5.5vw, 6rem);
     font-weight: 800;
 
     color: var(--txt-dark);
@@ -780,10 +789,10 @@ body.windowDown {
 
 .about-paragraph {
     position: absolute;
-    top: 250px;
-    left: 70px;
+    top: 30%;
+    left: 5%;
 
-    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 2.8vw, 0.95rem);
     font-weight: 600;
 
     color: var(--txt-dark);
@@ -795,11 +804,17 @@ body.windowDown {
     color: var(--txt-white);
 }
 /* Language box (about me) */
-.js-box {
-    position: absolute;
-    top: 700px;
-    left: 70px;
+.about-lang-box {
+    display: flex;
 
+    position: absolute;
+    top: 87%;
+    left: 5%;
+
+    gap: 30px;
+}
+
+.js-box {
     font-size: 1.8rem;
     font-weight: 800;
 
@@ -816,10 +831,6 @@ body.windowDown {
 }
 
 .html-box {
-    position: absolute;
-    top: 700px;
-    left: 160px;
-
     width: 38px;
     height: 38px;
 
@@ -839,10 +850,6 @@ body.windowDown {
 }
 
 .jvm-box {
-    position: absolute;
-    top: 700px;
-    left: 245px;
-
     width: 38px;
     height: 38px;
 
@@ -863,8 +870,8 @@ body.windowDown {
 
 .git-about-me {
     position: absolute;
-    top: 700px;
-    left: 1300px;
+    top: 87.5%;
+    left: 92.5%;
 
     width: 60px;
     height: 60px;
@@ -914,14 +921,7 @@ body.windowDown {
     opacity: 0;
 }   
 
-.git-repos {
-    color: var(--txt-white);
-    mix-blend-mode: difference;
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-.git-followers {
+.git-repos, .git-followers {
     color: var(--txt-white);
     mix-blend-mode: difference;
     font-size: 2rem;
@@ -2541,7 +2541,7 @@ textarea.windowDown:focus {
     }
 }
 
-@Keyframes mailSent {
+@keyframes mailSent {
     40% {
         transform: scale(1.1);
     }
