@@ -13,25 +13,76 @@ if(hours >= '18') {
 }
 
 // Scrolling
-const wrapper = document.querySelector(".elements-horizontal");
- 
-const lenis = new Lenis({
-  wrapper: wrapper,
-  content: wrapper,
-  orientation: "horizontal",
-  gestureOrientation: "both",
-  smoothWheel: true,
-  wheelMultiplier: 3,
-  touchMultiplier: 1.8,
-  lerp: 0.1,
-  infinite: false,
-});
- 
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
+let lenis;
+let rafId;
+
+function isMobileView() {
+    return window.innerWidth <= 1024;
 }
-requestAnimationFrame(raf);
+
+function initLenis() {
+    // Destroy old
+    if (lenis) {
+        lenis.destroy();
+        lenis = null;
+    }
+    if (rafId) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+    }
+
+    if (isMobileView()) {
+        // verticall scroll
+        document.body.style.overflowY = 'auto';
+        document.body.style.overflowX = 'hidden';
+
+        lenis = new Lenis({
+            orientation: 'vertical',
+            gestureOrientation: 'vertical',
+            smoothWheel: true,
+            wheelMultiplier: 1,
+            touchMultiplier: 1.5,
+            lerp: 0.1,
+        });
+
+    } else {
+        // horizontal scroll
+        document.body.style.overflowY = '';
+        document.body.style.overflowX = '';
+
+        const wrapper = document.querySelector('.elements-horizontal');
+
+        lenis = new Lenis({
+            wrapper: wrapper,
+            content: wrapper,
+            orientation: 'horizontal',
+            gestureOrientation: 'both',
+            smoothWheel: true,
+            wheelMultiplier: 3,
+            touchMultiplier: 1.8,
+            lerp: 0.1,
+            infinite: false,
+        });
+    }
+
+    // RAF loop
+    function raf(time) {
+        lenis.raf(time);
+        rafId = requestAnimationFrame(raf);
+    }
+    rafId = requestAnimationFrame(raf);
+}
+
+let resizeTimer;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        initLenis();
+    }, 300);
+});
+
+// Initial call
+initLenis();
 
 // Get github info
 let followers = 0;
