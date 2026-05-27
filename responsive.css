@@ -1,0 +1,222 @@
+/* ---- Zoom reset for mid-size screens ---- */
+@media screen and (max-width: 1400px) {
+    body {
+        zoom: 85% !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        zoom: 100% !important;
+    }
+}
+
+/*  MOBILE & TABLET */
+@media screen and (max-width: 1024px) {
+
+    body {
+        display: block !important;
+        zoom: 100% !important;
+
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+
+        height: auto !important;
+        min-height: 100vh;
+    }
+
+    .elements-horizontal {
+        display: block !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        overflow: visible !important;
+    }
+
+    /* NAV BAR*/
+    .nav-bar {
+        position: fixed !important;
+        left: 20px !important;
+
+        width: calc(100% - 40px) !important;
+        height: auto !important;
+
+        margin: 15px 0 0 0 !important;
+        padding: 12px 16px !important;
+
+        flex-wrap: wrap !important;
+        gap: 12px !important;
+        justify-content: space-between !important;
+        justify-self: unset !important;
+
+        box-shadow: 5px 5px 0px var(--border-color-dark) !important;
+
+        z-index: 999 !important;
+    }
+
+    #blackout {
+        font-size: 1.3rem !important;
+        padding: 5px 12px !important;
+    }
+
+    .nav-links {
+        gap: 15px !important;
+        font-size: 0.85rem !important;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-socials {
+        gap: 10px !important;
+    }
+
+    .social-icon {
+        width: 38px !important;
+        height: 38px !important;
+    }
+
+    .social-icon img {
+        width: 26px !important;
+        height: 26px !important;
+    }
+
+    .material-symbols-outlined {
+        font-size: 38px !important;
+        width: 38px !important;
+        height: 38px !important;
+    }
+
+    /* Title */
+    #title {
+        display: flex !important;
+        flex-direction: column !important;
+
+        width: 100% !important;
+        height: auto !important;
+        min-height: 100vh !important;
+
+        margin-top: 155px !important;
+        padding: 30px 20px 60px !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+    }
+
+    .top-box {
+        width: 40% !important;
+        height: 10% !important;
+
+        padding: 8px 16px !important;
+        
+        font-size: 3rem !important;
+        
+        animation: float 3s ease-in infinite !important;
+    }
+
+    .top-H, .mid-H, .bottom-H {
+        display: none !important;
+    }
+
+    .header-mid {
+        margin-top: 25px !important;
+        
+        font-size: 1rem !important;
+        width: 100% !important;
+
+        text-align: center !important;
+    }
+
+    .top-header {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .top-header::after {
+        content: "BUILDING";
+        display: block;
+
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(10rem, 9vw, 6rem);
+        height: 150px;
+        font-weight: 800;
+
+        text-align: center;
+        color: black;
+        letter-spacing: -0.05em;
+    }
+
+    .mid-header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .mid-header::after {
+        content: "BOLD";
+        display: block;
+
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(10rem, 9vw, 5.5rem);
+        height: 150px;
+        font-weight: 800;
+
+        text-align: center;
+        color: transparent;
+        -webkit-text-stroke: 3px black;
+        letter-spacing: -0.05em;
+    }
+
+    .bottom-header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .bottom-header::after {
+        content: "EXPERIENCES";
+        display: block;
+
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(10rem, 5.5vw, 5.5rem);
+        height: 150px;
+        font-weight: 800;
+
+        text-align: center;
+        color: black;
+        letter-spacing: -0.05em;
+    }
+
+    .description-paragraph {
+        width: 90% !important;
+        font-size: clamp(3rem, 3.2vw, 1.6rem) !important;
+        margin-top: 20px !important;
+    }
+
+    .bottom-buttons {
+        width: 100% !important;
+        height: 40% !important;
+
+        gap: 40px !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        margin-top: 28px !important;
+
+        animation: none !important;
+    }
+
+    .works-button,.contact-button {
+        padding: 14px 28px !important;
+        font-size: 3rem !important;
+        box-shadow: 20px 20px 0px 0px var(--border-color-dark) !important;
+    }
+
+    .works-button:active, .contact-button:active {
+        transform: translate(7px, 7px) !important;
+        box-shadow: none !important;
+    }
+
+
+}
