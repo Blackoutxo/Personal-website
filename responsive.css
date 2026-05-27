@@ -368,12 +368,12 @@
         top: auto !important;
         left: auto !important;
     
-        margin-bottom: 100px;
+        margin-bottom: 100px !important;
 
         width: 100% !important;
         height: 400px !important;
  
-        box-sizing: border-box;
+        box-sizing: border-box !important;
     }
 
     /* remove animation FE Box */
@@ -387,16 +387,419 @@
         top: auto !important;
         left: auto !important;
     
-        margin-bottom: 100px;
+        margin-bottom: 100px !important;
 
         width: 100% !important;
         height: 400px !important;
  
-        box-sizing: border-box;    
+        box-sizing: border-box !important;    
     }
 
     .back-end-box:hover {
         transform: none !important;
     }
 
+    /* ----- Projects ----- */
+    #projects {
+        display: block !important;
+
+        position: relative !important;
+        left: 0 !important;
+        top: 0 !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        padding: 40px 20px 60px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* remove the svg :sob: */
+    .work-T {
+        display: none !important;
+    }
+
+    .projects-container::before {
+        content: "Works";
+        display: block;
+
+        font-family: "Space Grotesk";
+        font-size: clamp (10rem, 8vw, 4rem);
+        font-weight: 800;
+        text-transform: uppercase;
+
+        color: var(--txt-dark);
+        margin-bottom: 100px !important;
+        letter-spacing: -0.05rem;
+    }
+
+    .projects-container {
+        display: flex !important;
+        flex-direction: column !important;
+    
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+    
+        gap: 35px !important;
+        width: 100% !important;
+    }
+
+    /* Project cards */
+    .combat-helper, .svelte-proj, .orcrist-addon-proj {
+        display: flex !important;
+        flex-direction: column !important;
+
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+
+        width: 100% !important;
+        height: 20% !important;
+
+        box-shadow: 10px 10px 0px 0px var(--border-color-dark) !important;
+    }
+
+    .combat-helper-container {
+        position: relative !important;
+
+        width: 100% !important;
+        height: 200px !important;
+
+        order: -1 !important;
+        
+        outline: none  !important;
+    }
+
+    .svelte-container {
+        position: relative !important;
+
+        width: 100% !important;
+        height: 200px !important;
+
+        order: -1 !important;
+        overflow: hidden !important;
+        outline: none !important;
+    }
+
+    .orcrist-container {
+        position: relative !important;
+
+        width: 100% !important;
+        height: 200px !important;
+
+        order: -1 !important;
+        overflow: hidden !important;
+        outline: none !important;
+        z-index: 1 !important;
+    }
+
+    
+    .image-combat,
+    .svelte-img {
+        width: 100% !important;
+        height: 200px !important;
+        object-fit: contain !important;
+    }
+
+    .orcrist-img {
+        position: relative !important;
+
+        width: 100% !important;
+        height: 200px !important;
+
+        object-fit: contain !important;
+        z-index: 1 !important;
+    }
+
+    .image-combat:hover, .svelte-img:hover, .orcrist-img:hover {
+        transform: scale(1.04) !important;
+    }
+
+    /* Project headers and texts */
+    .combat-H-text, .svelte-H-text, .orcrist-H-text {
+        display: block !important;
+
+        position: relative !important;
+        top: auto !important;
+        left:  auto !important;
+
+        font-size: clamp (7rem, 5vw, 2.8rem) !important;
+        letter-spacing: -0.1rem !important;
+        padding: 18px 20px !important;
+    }
+
+    .combat-paragraph, .svelte-paragraph, .orcrist-paragraph {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+
+        width: auto !important;
+
+        font-size: clamp(3rem, 2.5vw, 1.2rem) !important;
+        padding: 10px 20px !important;
+        display: block !important;
+    }
+
+    .LU-java, .LU-java-3 {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+
+        margin: 5px 20px !important;
+
+        width: 110px !important;
+        font-size: 3rem !important;
+    }
+
+    .LU-container {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+
+        margin: 5px 20px !important;
+    }
+
+    .LU-svelte, .LU-css, .LU-ts {
+        font-size: 3rem !important;
+    }
+
+    .project-buttons, .project-buttons-3 {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+
+        padding: 14px 20px 20px !important;
+        gap: 50px !important;
+        flex-wrap: wrap !important;
+    }
+
+    .open-live-code-1, .open-live-code-2, .open-live-code-3 {
+        font-size: 2.5rem !important;
+        padding: 10px 16px !important;
+        box-shadow: 6px 6px 0px 0px var(--border-color-dark) !important;
+    } 
+
+    .open-github-1, .open-github-2, .open-github-3 {
+        font-size: 2.5rem !important;
+        padding: 10px 16px !important;
+        box-shadow: 6px 6px 0px 0px var(--border-color-dark) !important;
+    }
+    
+    .open-live-code-1:active, .open-live-code-2:active, .open-live-code-3:active,
+    .open-github-1:active, .open-github-2:active, .open-github-3:active {
+        transform: translate(6px, 6px) !important;
+        box-shadow: none !important;
+    }
+
+    .p1-tag, .p2-tag, .p3-tag {
+        font-size: 0.9rem !important;
+    }
+
+    /*----- Contact ----- */
+    #contact {
+        display: flex !important;
+        flex-direction: column !important;
+
+        position: relative !important;
+        left: 0 !important;
+        top: 200px !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        gap: 25px !important;
+        padding: 40px 20px 60px !important;
+        box-sizing: border-box !important;
+    }
+
+    .info-card {
+        position: relative !important;
+        top : auto !important;
+        left: auto !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        min-height: 280px !important;
+        margin-bottom: 50px !important;
+
+        transform: rotate(0deg) !important;
+        box-sizing: border-box !important;
+    }
+
+    .info-card:hover {
+        transform: translate(-6px, -6px) rotate(0deg) !important;
+    }
+
+    .top-card {
+        position: absolute !important;
+        top: 20px !important;
+        left: 20px !important;
+
+        font-size: 2rem !important;
+    }
+
+    .info-header {
+        display: flex !important;
+        flex-wrap: wrap !important;
+
+        position: relative !important;
+        top: 50% !important;
+        left: auto !important;
+
+        font-size: clamp(2.5rem, 8vw, 5rem) m !important;
+
+        width: 100% !important;
+
+        align-items: baseline !important;
+        padding: 65px 20px 0 !important;
+        box-sizing: border-box !important;
+        line-height: 1 !important;
+    }
+
+    .info-H-build {
+        display: inline !important;
+
+        position: relative !important;;
+        top: auto !important;
+        left: 2% !important;
+    }
+
+    .info-H-it {
+        display: inline !important;
+
+        position: absolute !important;
+        top: auto !important;
+        left: 3% !important;
+
+        margin-left: 12px !important;
+    }
+
+    .info-paragraph {
+        position: absolute !important;
+        bottom: 20px !important;
+        top: auto !important;
+        left: 20px !important;
+        right: 20px !important;
+
+        font-size: clamp(2.5rem, 2.5vw, 1.2rem) !important;
+    }
+
+    .mail-box {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+
+        width: 100% !important;
+        height: 175px !important;
+        margin-bottom: 50px !important;
+
+        box-shadow: 10px 10px 0px 0px var(--border-color-dark);
+        box-sizing: border-box !important;
+    }
+
+    .mail-box:hover {
+        transform: translate(-4px, -4px) !important;
+        box-shadow: 14px 14px 0px 0px var(--border-color-dark) !important;
+    }
+
+    .mail-box.windowDown:hover {
+        box-shadow: 14px 14px 0px 0px var(--neo) !important;
+    }
+
+    .social-box {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+
+        width: 100% !important;
+        height: 190px !important;
+
+        margin-bottom: 50px !important;
+
+        box-shadow: 10px 10px 0px 0px var(--border-color-dark);
+    }
+
+    .social-box:hover {
+        transform: translate(-4px, -4px) !important;
+        box-shadow: 14px 14px 0px 0px var(--border-color-dark) !important;
+    }
+
+    .send-icon {
+        display: none !important;
+    }
+
+    .form-box {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        box-sizing: border-box !important;
+        box-shadow: 10px 10px 0px 0px var(--border-color-dark);
+    }
+
+    form {
+        padding: 28px 18px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    label {
+        font-size: 2rem !important;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100% !important;
+        height: 55px !important;
+
+        font-size: 2rem !important;
+        box-sizing: border-box !important;
+    }
+
+    textarea {
+        height: 130px !important;
+    }
+
+    .submit-button {
+        width: 100% !important;
+        height: 65px !important;
+
+        font-size: 1.5rem !important;
+        box-shadow: 8px 8px 0px 0px var(--border-color-dark) !important;
+        box-sizing: border-box !important;
+    }
+
+
+    /* Dark theme for mobiles */
+    body.windowDown .topheader::after,
+    body.windowDown .bottom-header::after {
+        color: var(--txt-white) !important;
+    }
+
+        body.windowDown .mid-header::after {
+        color: transparent !important;
+        -webkit-text-stroke: 3px white !important;
+    }
+
+    body.windowDown .projects-container::before {
+        color: white !important;
+    }
+
+    /* Reduce animations so as to reduce loss of performance */
+    @media (prefers-reduced-motion: no-preference) {
+        .top-header::after {
+            animation: fadeIn 1s ease-in-out;
+        }
+        .bottom-header::after {
+            animation: fadeIn 1.2s ease-in-out;
+        }
+    }
 }
+
+
