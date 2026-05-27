@@ -538,7 +538,7 @@
 
         width: auto !important;
 
-        font-size: clamp(3rem, 2.5vw, 1.2rem) !important;
+        font-size: clamp(2.5rem, 2.5vw, 1.2rem) !important;
         padding: 10px 20px !important;
         display: block !important;
     }
