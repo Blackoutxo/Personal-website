@@ -22,7 +22,7 @@
         overflow-x: hidden !important;
 
         height: auto !important;
-        min-height: 100vh;
+        min-height: 100vh !important;
     }
 
     .elements-horizontal {
@@ -64,8 +64,8 @@
         gap: 15px !important;
         font-size: 0.85rem !important;
         order: 3;
-        width: 100%;
-        justify-content: center;
+        width: 100% !important;
+        justify-content: center !important;
         flex-wrap: wrap;
     }
 
@@ -141,11 +141,11 @@
         display: block;
 
         font-family: "Space Grotesk", sans-serif;
-        font-size: clamp(10rem, 9vw, 6rem);
-        height: 150px;
+        font-size: clamp(10rem, 9vw, 6rem) !important;
+        height: 150px !important;
         font-weight: 800;
 
-        text-align: center;
+        text-align: center !important;
         color: black;
         letter-spacing: -0.05em;
     }
@@ -160,11 +160,11 @@
         display: block;
 
         font-family: "Space Grotesk", sans-serif;
-        font-size: clamp(10rem, 9vw, 5.5rem);
-        height: 150px;
+        font-size: clamp(10rem, 9vw, 5.5rem) !important;
+        height: 150px !important;
         font-weight: 800;
 
-        text-align: center;
+        text-align: center !important;
         color: transparent;
         -webkit-text-stroke: 3px black;
         letter-spacing: -0.05em;
@@ -180,13 +180,13 @@
         display: block;
 
         font-family: "Space Grotesk", sans-serif;
-        font-size: clamp(10rem, 5.5vw, 5.5rem);
-        height: 150px;
+        font-size: clamp(10rem, 5.5vw, 5.5rem) !important;
+        height: 150px !important;
         font-weight: 800;
 
-        text-align: center;
+        text-align: center !important;
         color: black;
-        letter-spacing: -0.05em;
+        letter-spacing: -0.05em !important;
     }
 
     .description-paragraph {
