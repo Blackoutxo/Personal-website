@@ -193,21 +193,22 @@ gitButton.addEventListener('click', () => {
 const forms = document.querySelectorAll('#name, #email, #message');
 const subBtn = document.querySelector('.submit-button');
 const mailSent = document.querySelector('.mail-sent');
-let toggle = 0;
 
 mailSent.classList.add('hidden');
 
 subBtn.addEventListener('click', () => {
     forms.forEach(form => {
         if(form.value.trim() === '') {    
-            toggle = toggle === 0 ? 1 : 0;
+        
             subBtn.classList.toggle('clickOnly');
-        } else if (toggle === 1) {
+       
+        } else {
+           
             subBtn.classList.toggle('clickOnly');
             subBtn.classList.add('clicked');
+           
             mailSent.classList.add('sentAnim');
             mailSent.classList.remove('hidden');
-            console.log('tru');            
         }
     });
 });
