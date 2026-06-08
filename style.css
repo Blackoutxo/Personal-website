@@ -29,24 +29,6 @@
     --neo-yellow: rgb(250, 213, 48);
 }
 
-:root.test {
-    --accent-card:rgb(248, 103, 103);
-
-    --border: rgb(0, 0, 0);
-    --shadow: rgb(0, 0, 0);
-
-    --txt: rgb(0, 0, 0);
-
-    --bg: rgb(255, 255, 255);
-}
-
-:root.dark {
-    --border: rgb(255, 198, 144);
-    -shadow: rgb(175, 46, 65);
-    --txt: rgb(255, 255, 255);
-    --bg: rgb(0, 0, 0);
-}
-
 
 /* Fonts */
 .space-grotesk-bold {
@@ -1826,6 +1808,10 @@ body.windowDown {
     padding: 5px 10px;
     background-color: rgb(255, 247, 174);
     outline: 6px solid var(--border-color-dark);
+}
+
+.LU-java-3.windowDown {
+    outline: 6px solid var(--accent-card);
 }
 
 .LU-java-3.anim {
