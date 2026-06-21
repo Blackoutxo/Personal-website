@@ -57,7 +57,7 @@
 ## Github api
 ### Github api is used to fetch and display the data of my profile in the about me section when the big ol' github button is clicked which lies on the bottom right side.
 
-<img width="48" height="46" alt="image" src="https://github.com/user-attachments/assets/cd1f99e3-1ef9-4271-85a8-a690d55d0311" /> When pressed here, it will reveal my user data fetched from github api itself.
+<img width="48" height="46" alt="image" src="https://github.com/user-attachments/assets/cd1f99e3-1ef9-4271-85a8-a690d55d0311" /> ### At about section, when pressed it will reveal my user data fetched from github api itself.
 
 ### Original readme featured "This is a website made by me for me, looked kinda cute might delete later." 
 
