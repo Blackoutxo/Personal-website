@@ -31,16 +31,26 @@ body {
     width: 30vw;
     height: 20vh;
 
+    border-radius: 3px;
     background: rgb(80, 78, 78);
-    border-radius: 10px;
+    outline: 0.2vw solid rgb(0, 0, 0);
+    box-shadow: 0.5vw 0.5vw 0 0 rgb(3, 3, 3);
 
     transition: transform 0.3s;
 }
 
 .repo-title {
-    text-align: center;
+    width: 50%;
 
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    text-align: center;
     color: rgb(51, 137, 235);
-    font-size: 1vw;
 }
 
+.repo-img {
+    margin: 1% 30%;
+
+    width: 30px;
+    height: 30px;
+}
