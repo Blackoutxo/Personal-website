@@ -18,7 +18,8 @@ function displayRepo(repos) {
         container.innerHTML += `
         
         <div class="repo"> 
-           <div class="repo-title">${repo.name}</div>
+           <img class="repo-img" src="../assets/images/icons/github.svg" style="position:absolute;">
+           <div class="repo-title" style="position:absolute">${repo.name}</div>
         </div>
         `;
     });
